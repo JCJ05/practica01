@@ -1,8 +1,50 @@
-﻿@{
+﻿@model practica01.Models.Producto
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mt-5">
+
+    <h1 class="display-4">Registro de ventas</h1>
+
+    <form>
+
+     <div class="col-6">
+
+          <label asp-for="nombre" class="form-label">Nombres</label>
+          <input asp-for="nombre" type="text" class="form-control" placeholder="Nombre">
+
+        </div>
+
+       
+          
+
+        <div class="col-6">
+
+            <select asp-for="categoria" class="form-select">
+                <option selected disabled>Categoria...</option>
+                <option value="+14">Mayores de 14</option>
+                <option value="+18">Mayores de 18</option>
+                <option value="APT">Apto para todo el publico</option>
+                
+              </select>
+
+        </div>
+
+       
+
+        <div>
+
+          <button class="btn btn-info"> Registrar Alumno </button>
+
+        </div>
+
+
+
+
+    </form>
+   
+
+    
 </div>
