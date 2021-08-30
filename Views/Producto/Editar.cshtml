@@ -1,4 +1,4 @@
-﻿@model practica01.Models.Producto
+@model practica01.Models.Producto
 
 @{
     ViewData["Title"] = "Home Page";
@@ -8,7 +8,9 @@
 
     <h1 class="display-4">Registro de ventas</h1>
 
-    <form asp-action="Guardar" asp-controller="Producto" method="POST" class="row g-2 align-items-center">
+    <form asp-action="Editar" asp-controller="Producto" method="POST" class="row g-2 align-items-center">
+
+        <input type="hidden" asp-for="Id">
 
      <div class="col-12">
 
@@ -51,13 +53,9 @@
 
           
 
-       
-
-       
-
         <div>
 
-          <button class="btn btn-info"> Registrar Venta </button>
+          <button class="btn btn-info"> Modificar Venta </button>
 
         </div>
 
