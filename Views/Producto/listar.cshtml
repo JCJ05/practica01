@@ -13,20 +13,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.nombre)
+               Nombre
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.categoria)
+                Categoria
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.precio)
+              Precio
             </th>
 
              <th>
-                @Html.DisplayNameFor(model => model.descuento)
+                Descuento
             </th>
         
            <th>Editar Venta</th>
+
+           <th>Eliminar Venta</th>
 
         </tr>
     </thead>
@@ -48,6 +50,10 @@
 
              <td>
                 <a class="btn btn-primary" asp-action="Editar" asp-controller="Producto"  asp-route-id="@item.Id">Editar</a>
+            </td>
+
+             <td>
+                <a class="btn btn-danger" asp-action="Eliminar" asp-controller="Producto"  asp-route-id="@item.Id">Eliminar</a>
             </td>
 
         </tr>

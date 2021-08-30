@@ -57,7 +57,14 @@ namespace practica01.Controllers
               ViewData["Mensaje"] = "La venta se actualizo con exito";
              return View("Views/Producto/Editar.cshtml" , producto);
         }
-
+       
+          public IActionResult Eliminar(int id)
+        {
+            Producto producto = _context.DataProductos.Find(id);
+            _context.DataProductos.Remove(producto);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Listar));
+        }
         
     }
 }
